@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <script>
+      var estaciones = ["Invierno", "Primavera", "Verano", "Otoño"];
+      var meses = [
+        "enero",
+        "febrero",
+        "marzo",
+        "abril",
+        "mayo",
+        "junio",
+        "julio",
+        "agosto",
+        "septiembre",
+        "octubre",
+        "noviembre",
+        "diciembre",
+      ];
+
+      var entrada = prompt("Dime un mes:");
+      var mes = entrada.toLowerCase();
+      if (mes === meses[11] || mes === meses[0] || mes === meses[1]) {
+        alert("Estamos en " + estaciones[0]);
+      } else if (mes === meses[2] || mes === meses[3] || mes === meses[4]) {
+        alert("Estamos en " + estaciones[1]);
+      } else if (mes === meses[5] || mes === meses[6] || mes === meses[7]) {
+        alert("Estamos en " + estaciones[2]);
+      } else if (mes === meses[8] || mes === meses[9] || mes === meses[10]) {
+        alert("Estamos en " + estaciones[3]);
+      }
+    </script>
+  </body>
+</html>

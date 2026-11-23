@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <div id="divisor">
+    <p> Este es el primer parrafo </p> 
+    </div>
+        <input type="button" value="Añadir párrafo" onclick="anadirParrafo();"/> </br> 
+        <input type="button" value="Insertar párrafo" onclick="insertarParrafo();" /></br> 
+        <input type="button" value="Párrafo reemplazado" onclick="parrafoReemplazado();" /></br> 
+        <input type="button" value="Borrar párrafo" onclick="borrarParrafo();" /> </br>
+        <input type="button" value="Clonar div" onclick="clonarDiv();" />
+
+    <script>
+        var div = document.getElementById("divisor");
+        var parrafos = div.getElementsByTagName("p");
+
+         function anadirParrafo() {
+        var parrafo = document.createElement("p");
+        var texto = document.createTextNode("Párrafo añadido");
+        parrafo.appendChild(texto);
+        document.getElementById("divisor").appendChild(parrafo);
+      }
+
+      function insertarParrafo() {
+        var parrafo = document.createElement("p");
+        var texto = document.createTextNode("Párrafo insertado");
+        parrafo.appendChild(texto);
+        document.getElementById("divisor").insertBefore(parrafo, parrafos[1]);
+      }
+
+      function parrafoReemplazado(){
+        var parrafo = document.createElement("p");
+        var texto = document.createTextNode("Párrafo reemplazado");
+        parrafo.appendChild(texto);
+        document.getElementById("divisor").replaceChild(parrafo, parrafos[1]);
+      }
+
+      function borrarParrafo() {
+        document.getElementById("divisor").removeChild(parrafos[1]);
+        }
+        
+        function clonarDiv() {
+        var divOriginal = document.getElementById("divisor");
+        var divClonado = divOriginal.cloneNode(true);
+        document.body.appendChild(divClonado);
+      }
+
+    </script>
+    
+</body>
+</html>

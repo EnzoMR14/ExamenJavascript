@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <input type="button" value="Número de Imágenes" onclick="contarImagenes();" />
+    <input type="button" value="Número de enlaces" onclick="contarEnlaces();" /> </br>
+     <br />
+
+    <a href="https://www.google.com">Google</a>
+    <a href="https://www.wikipedia.org">Wikipedia</a>
+
+    <br />
+
+    <img src="img/fer.jpg" alt="Fernando" /> </br>
+    <img src="img/perro.jpeg" alt="Perro" /> </br>
+    <img src="img/Persona.jpeg" alt="Persona" />
+
+
+
+    <script>
+    function contarImagenes() {
+        var imagenes = document.getElementsByTagName("img");
+        alert("Número total de imágenes: " + imagenes.length);
+      }
+
+      function contarEnlaces() {
+        var enlaces = document.getElementsByTagName("a");
+        alert("Número total de enlaces: " + enlaces.length);
+      }
+        
+    </script>
+    
+</body>
+</html>

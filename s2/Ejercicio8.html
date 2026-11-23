@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Ejercicio 8</title>
+  </head>
+  <body>
+    <p id="texto"></p>
+    <button onclick="location.assign('http://Google.com')">Google</button> 
+    <script>
+      
+
+        document.getElementById("texto").innerText='La URL actual es:' + location.href + "\n\n"
+        + 'El pathname es ' + location.pathname + "\n\n" +
+        'El protocol es ' + location.protocol;
+
+    </script>
+    
+</body>
+</html>

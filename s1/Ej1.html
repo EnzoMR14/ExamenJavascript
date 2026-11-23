@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script>
+      var resultado = 0;
+      var mayorque100 = 0;
+
+      for (let i = 1; i <= 5; i++) {
+        var num = parseInt(prompt("Introduce el numero" + i + ":"));
+
+        resultado += num;
+
+        if (num >= 100) {
+          mayorque100++;
+        }
+      }
+      alert("La suma es de " + resultado + "\n" + " Hay " + mayorque100 + " numeros mayor que 100" );
+    </script>
+  </body>
+</html>

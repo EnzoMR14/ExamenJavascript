@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <script>
+        var precio = parseFloat(prompt("Introduce el precio de el articulo"));
+
+        var iva = precio * 0.21;
+        var total = precio + iva;
+
+        alert("IVA " + iva.toFixed(2) + " euros");
+        alert("Precio total: " + total.toFixed(2) + " euros");
+    </script>
+  </body>
+</html>

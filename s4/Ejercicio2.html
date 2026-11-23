@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <div id="divisor">
+    <h1> ANIMALES </h1> 
+    <ul id="listaelemen">
+        <li> leon </li>
+        <li> pantera </li>
+        <li> jirafa </li>
+    </div>
+        <input type="button" value="Añadir nuevo Elemento" onclick="anadirElemento();"/> </br> 
+        <input type="button" value="Insertar nuevo elemento" onclick="insertarElemento();" /></br> 
+        <input type="button" value="Reemplazar elemento" onclick="reemplazarElemento();" /></br> 
+        <input type="button" value="Borrar elemento" onclick="borrarElemento();" /> </br>
+        <input type="button" value="Clonar la lista completa" onclick="clonarLista();" /> </br>
+        <input type="button" value="Crear Sublista dentro de leon con funciones DOM" onclick="crearSublistaDOM();" /> </br>
+        <input type="button" value="Crear Sublista dentro de leon con innerHTML" onclick="crearSublistaHTML();" /> </br>
+
+
+    <script>
+        var lista = document.getElementById("listaelemen");
+
+        var div = document.getElementById("divisor");
+        var parrafos = div.getElementsByTagName("p");
+
+        function anadirElemento() {
+        var li = document.createElement("li");
+        var texto = document.createTextNode("tigre");
+        li.appendChild(texto);
+        document.getElementById("listaelemen").appendChild(li);
+      }
+
+      function insertarElemento() {
+        var primero = lista.getElementsByTagName("li")[0];
+
+        var li = document.createElement("li");
+        var texto = document.createTextNode("oso");
+        li.appendChild(texto);
+
+        lista.insertBefore(li, primero.nextSibling);
+      }
+
+      function reemplazarElemento(){
+        var li = document.createElement("li");
+        var texto = document.createTextNode("gato");
+        li.appendChild(texto);
+        document.getElementById("listaelemen").replaceChild(li, document.getElementById("listaelemen").children[1]);
+      }
+
+      function borrarElemento() {
+        document.getElementById("listaelemen").removeChild(document.getElementById("listaelemen").children[1]);
+        }
+        
+        function clonarLista() {
+        var listaOriginal = document.getElementById("listaelemen");
+        var listaClonada = listaOriginal.cloneNode(true);
+        document.body.appendChild(listaClonada);
+      }
+
+      function crearSublistaDOM(){
+        var leon = document.getElementById("listaelemen").getElementsByTagName("li")[0];
+        
+        var sublista = document.createElement("ul");
+        var subitem = document.createElement("li");
+        var texto = document.createTextNode("Salvaje");
+
+        subitem.appendChild(texto);
+        sublista.appendChild(subitem);
+        leon.appendChild(sublista);
+      }
+
+      function crearSublistaHTML(){
+        var leon = document.getElementById("listaelemen").getElementsByTagName("li")[0];
+        leon.innerHTML += "<ul><li>Salvaje</li></ul>";
+      }
+
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <p>Párrafo 1: <a href="https://www.google.com">Google</a></p>
+    <p>
+      Párrafo 2: <a href="https://www.wikipedia.org">Wikipedia</a> y
+      <a href="https://www.mozilla.org">Mozilla</a>
+    </p>
+    <p>
+      Párrafo 3: <a href="https://www.github.com">GitHub</a>,
+      <a href="https://www.w3.org">W3C</a> y
+      <a href="https://developer.mozilla.org">MDN</a>
+    </p>
+
+    <input type="button" value="Número de enlaces" onclick="numeroEnlaces();" />
+    <input type="button" value="Referencia enlaces" onclick="referenciaEnlaces();" />
+    <input type="button" value="Referencia enlaces por párrafo" onclick="referenciaPorParrafo();" /></button>
+    </form>
+    <script>
+      function numeroEnlaces() {
+        var enlaces = document.getElementsByTagName("a");
+        alert("Número total de enlaces: " + enlaces.length);
+      }
+      function referenciaEnlaces() {
+        var enlaces = document.getElementsByTagName("a");
+        var texto = "Referencias de los enlaces:\n";
+        for (var i = 0; i < enlaces.length; i++) {
+          texto += enlaces[i].href + "\n";
+        }
+        alert(texto);
+      }
+
+       function referenciaPorParrafo() {
+        var parrafos = document.getElementsByTagName("p");
+        var texto = "";
+        for (var i = 0; i < parrafos.length; i++) {
+          var enlaces = parrafos[i].getElementsByTagName("a");
+          texto += "Párrafo " + (i + 1) + ":\n";
+          for (var j = 0; j < enlaces.length; j++) {
+            texto += "  " + enlaces[j].href + "\n";
+          }
+        }
+        alert(texto);
+      }
+
+
+    </script>
+    
+</body>
+</html>

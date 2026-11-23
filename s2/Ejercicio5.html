@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Ejercicio 5</title>
+  </head>
+  <body>
+    <input type="button" value="Fecha Actual" onclick="mostrarFecha();" />
+        <script>
+      function mostrarFecha() {
+        var dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+        var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+        var fecha = new Date();
+        var texto = dias[fecha.getDay()] + ", " + fecha.getDate() + " de " + meses[fecha.getMonth()] + " de " + fecha.getFullYear();
+
+        alert(texto);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <script>
+        var fraseFinal = "";
+        var mensajeReversa= "";
+
+
+        var cadena = prompt("Introduce una cadena:");
+
+        var fraseSeparada = cadena.split(" ");
+        
+        
+        for(i of fraseSeparada){
+            fraseFinal += i + "<br>";
+        }
+        var fraseReversa = cadena.split(" ");
+        fraseReversa.reverse();
+        
+
+        for(f of fraseReversa){
+            mensajeReversa += f + "<br>";
+        }
+
+    document.write("La longitud de la cadena es de " + cadena.length + " caracteres " + "<br>");
+    document.write("La cadena en mayúsculas es" + cadena.toUpperCase() + "<br>");
+    document.write("La cadena en minúsculas es" + cadena.toLowerCase() + "<br>");
+    document.write("La cadena normal" + "<br>" + fraseFinal);
+    document.write("La cadena al revés" + "<br>" + mensajeReversa);
+
+    </script>
+    
+</body>
+</html>
